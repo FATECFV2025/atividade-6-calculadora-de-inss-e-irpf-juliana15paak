@@ -6,11 +6,13 @@ public abstract class Contribuinte implements CalculadoraTributo{
   private String nome;
   private String cpf;
   private double salarioBruto;
+  protected TipoContribuinte tipo;
 
-  public Contribuinte(String nome, String cpf, double salarioBruto){
+  public Contribuinte(String nome, String cpf, double salarioBruto, TipoContribuinte tipo){
     this.nome = nome;
     this.cpf = cpf;
     this.salarioBruto = salarioBruto;
+    this.tipo = tipo;
   }
 
   public String getNome(){
@@ -34,7 +36,7 @@ public abstract class Contribuinte implements CalculadoraTributo{
 
   public void exibirResumo(){
     System.out.println("Nome: "+this.nome);
-    System.out.println("Tipo do contribuinte: ");
+    System.out.println("Tipo do contribuinte: "this.tipo);
     System.out.println("Salário bruto: "+this.salarioBruto);
     System.out.println("Valor do INSS: "+calcularINSS());
     System.out.println("Valor do IRPF: "+calcularIRPF());

@@ -1,6 +1,6 @@
 public class PrestadorServico extends Contribuinte{
-  public PrestadorServico(String nome, String cpf, double salarioBruto){
-    super(nome, cpf, salarioBruto);
+  public PrestadorServico(String nome, String cpf, double salarioBruto, TipoContribuinte tipo){
+    super(nome, cpf, salarioBruto, TipoContribuinte.PrestadorServico);
   }
   @Override
   public double calcularINSS(){

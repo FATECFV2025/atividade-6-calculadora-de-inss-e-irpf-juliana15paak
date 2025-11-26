@@ -1,6 +1,6 @@
 public class FuncionarioCLT extends Contribuinte{
-  public FuncionarioCLT(String nome, String cpf, double salarioBruto){
-    super(nome, cpf, salarioBruto);
+  public FuncionarioCLT(String nome, String cpf, double salarioBruto, TipoContribuinte tipo){
+    super(nome, cpf, salarioBruto, TipoContribuinte.FuncionarioCLT);
   }
   @Override
   public double calcularINSS(){
