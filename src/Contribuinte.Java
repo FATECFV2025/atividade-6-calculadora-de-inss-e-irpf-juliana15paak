@@ -7,6 +7,12 @@ public abstract class Contribuinte implements CalculadoraTributo{
   private String cpf;
   private double salarioBruto;
 
+  public Contribuinte(String nome, String cpf, double salarioBruto){
+    this.nome = nome;
+    this.cpf = cpf;
+    this.salarioBruto = salarioBruto;
+  }
+
   public String getNome(){
     return this.nome;
   }
@@ -19,7 +25,7 @@ public abstract class Contribuinte implements CalculadoraTributo{
   public void setCpf(String cpf){
     this.cpf = cpf;
   }
-  public String getSalarioBruto(){
+  public double getSalarioBruto(){
     return this.salarioBruto;
   }
   public void setSalarioBruto(double salarioBruto){
@@ -30,8 +36,8 @@ public abstract class Contribuinte implements CalculadoraTributo{
     System.out.println("Nome: "+this.nome);
     System.out.println("Tipo do contribuinte: ");
     System.out.println("Salário bruto: "+this.salarioBruto);
-    System.out.println("Valor do INSS: ");
-    System.out.println("Valor do IRPF: ");
-    System.out.println("Salário líquido: ");
+    System.out.println("Valor do INSS: "+calcularINSS());
+    System.out.println("Valor do IRPF: "+calcularIRPF());
+    System.out.println("Salário líquido: "+calcularSalarioLiquido());
   }
 }
